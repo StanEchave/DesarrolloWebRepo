@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../css/styles.css">
+    <title>Contacto</title>
+    <link rel="icon" href="../icons/icono.png" type="image/x-icon">
+</head>
+
+<body>
+    
+    <header class="encabezado">
+        
+
+        <h1 class="encabezado__titulo">
+            <a href="../index.html">
+                <img src="../icons/logo.png" alt="logo DDE Integral Service Tech">
+            </a>
+        </h1>
+
+        <nav >
+            <ul class="encabezado__nav__lista">
+                <!--ENLACES ABSOLUTOS-->
+
+                <li class="encabezado__nav__lista__li">
+                    <a class="links" href="../index.html">
+                        Home
+                    </a>
+                </li>                               
+
+                <li class="encabezado__nav__lista__li">
+                    <a class="links" href="servicios.html">
+                        Servicios 
+                    </a>
+                    
+                </li>
+
+                <li class="encabezado__nav__lista__li">
+                    <a class="links" href="clientes.html">
+                        Clientes
+                    </a>
+                    
+                </li>
+
+                 <li class="encabezado__nav__lista__li">
+                    <a class="links" href="contacto.html ">
+                       Contacto
+                    </a>
+                </li>
+
+                <li class="encabezado__nav__lista__li">
+                    <a class="links" href="nosotros.html">
+                        Nosotros
+                    </a>
+                </li>
+
+            </ul>
+        </nav>  
+
+    </header>
+
+    <div class="total__formulario">
+        <h2 class="formulario__titulo">Formulario de contacto</h2>
+
+        <form class="formulario" action="">
+            <fieldset class="formulario__field">
+                        
+                <!-- Creamos los diferentes contenedores con la etiqueta div-->
+
+                <div class="formulario__field__div">
+
+                    <label class="formulario__label" for="Nombre">
+                        Nombre de la empresa 
+                    </label>  
+
+                    <input class="formulario__field__div__input" type="text" name="nombre " placeholder="Tu nombre">
+
+                </div>
+
+                <div class="formulario__field__div">
+                    <label class="formulario__label" for="mail">
+                        E-mail
+                    </label>         
+                    <input class="formulario__field__div__input" type="email" name="mail " placeholder="Tu mail">
+                </div>
+
+                
+
+                <div class="formulario__field__div">
+                    <label class="formulario__label" for="comentario" >
+                        Comentario 
+                    </label>
+                    <textarea class="formulario__field__div__input" name="comentario"  cols="30" rows="10" placeholder="Haz tu comentario" ></textarea>         
+                    <!-- <input type="text" name="comentario " placeholder="Haz tu comentario" size="100"> -->
+                </div>
+
+                <!-- etiquetas con el type necesario para crear el boton de enviar y borrar la informacion de los input-->
+                <div class="formulario__field__div">
+                    <input type="submit" value="enviarlo">
+                    <input type="reset" value="borrar">
+                </div>
+                                        
+            </fieldset>
+        </form>
+    </div>
+
+
+    <footer class="pie">
+      
+        <div class="follow" style="text-align:center ;">
+            Seguinos en nuestras redes
+        </div>
+
+        <div class="redes" style="text-align:center ;">   
+
+            <a class="links" href="https://www.twitter.com"target="_blank" >
+                <img src="../icons/twitter.png" alt="" width="2.5%">
+            </a>
+
+            <a class="links" href="https://www.Facebook.com"target="_blank" >
+                <img src="../icons/facebook.png" alt="" width="2.5%">
+            </a>
+            
+            <a class="links" href="https://www.instagram.com"target="_blank" >
+                <img src="../icons/instagram.png" alt="" width="2.5%">
+            </a>
+        </div>
+
+       
+
+        <h3 class="derechos"> Todos los derechos reservados </h3>
+    </footer>
+
+</body>
+</html>

@@ -1,0 +1,316 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing: border-box ;  
+}
+
+body{
+
+    font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+
+/* APLICACION DE GRID PAGE INDEX Y SERVICIOS*/
+
+.contenedor{
+    display: grid;
+    grid-template-columns: repeat(2,1fr) ;
+    grid-template-rows: repeat(3,1fr);
+    gap: 10px;
+    height: 100vh; 
+    justify-content: center;
+    align-items: center;
+    grid-template-areas: "header header"
+                        "parrafo1 imagen1"
+                        "imagen2 parrafo2"
+                        "parrafo3 imagen3"
+                        "footer footer";
+}
+
+.encabezado{
+    grid-area: header;
+}
+
+
+.contenido__p1{
+    grid-area: parrafo1;
+}
+
+.contenido__img1{
+    grid-area: imagen1;
+}
+
+.contenido__p2{
+    grid-area: parrafo2;
+}
+
+.contenido__img2{
+    grid-area: imagen2;
+}
+
+.contenido__p3{
+    grid-area: parrafo3;
+}
+
+.contenido__img3{
+    grid-area: imagen3;
+}
+
+.pie{
+    grid-area: footer;
+}
+
+/*APLICACION GRID PAGE NOSOTROS */
+
+.contenedor__nosotros{
+    display: grid;   
+    gap: 10px;
+    height: 100vh;    
+    grid-template-areas:"header header header"
+                        "presentacion presentacion presentacion"
+                        "nosotros1 nosotros2 nosotros3"
+                        "footer footer footer";
+}
+
+.presentacion{
+    grid-area: presentacion;
+}
+
+.nosotros1{
+    grid-area: nosotros1;
+}
+
+.nosotros2{
+    grid-area: nosotros2;
+}
+
+.nosotros3{
+    grid-area: nosotros3;
+}
+
+
+/* ESTILOS DEL ENCABEZADO Y EL NAV*/
+
+.encabezado{
+    position: sticky;
+    top: 0;   
+    padding: 5px;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    background-color: rgb(255, 255, 255);
+    height: 150px;
+  
+}
+
+    
+.encabezado__nav__lista{ 
+ 
+  font-size: 18px;  
+}
+
+.encabezado__nav__lista__li{   
+    list-style: none;
+    display: inline-block;
+    margin: 10px;   
+}
+
+.links{
+    text-decoration: none;
+    font-size: 18px;
+    color: rgb(0, 0, 0);
+}
+
+
+/* ESTILOS DEL CONTENIDO PRINCIPAL*/
+.contenido{
+    display: flex;
+    justify-content: space-around;
+    width: 100%;
+   
+} 
+
+
+.contenido__img{
+    border-radius: 15px;
+  
+}
+
+.contenido__titulo{
+    font-size: 32px;
+    text-align: center;
+    margin: 10px;
+    
+
+}
+
+.contenido__parrafo{
+    margin: 15px;
+}
+
+
+/* ESTILO DEL LOGO DE WPP*/
+.wppLogo{
+    position: fixed;    
+    right: 20px;
+    bottom: 20px;
+    z-index: 5;
+
+}
+
+/* ESTILOS DEL PIE DE PAGINA*/
+
+.pie{
+    
+ 
+    padding-top: 10px;
+
+    background-color: rgb(177, 199, 209);
+}
+
+.redes{
+    
+    padding: 8px;
+}
+
+.link_logo{
+    width:2.5%;
+}
+
+.derechos{
+    
+    text-align: center;
+}
+
+
+/* ESTILOS DEL FORMULARIO DE CONTACTO*/
+
+.total_formulario{
+    align-items: center;
+    justify-content: center;
+}
+
+.formulario__titulo{
+    text-align: center;
+    font-size: 37px;
+}
+
+.formulario{
+    margin: 35px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;    
+}
+
+.formulario__field{
+    width: 30%;
+    border: 1px solid #CED5D7;
+    border-radius: 6px;
+    padding: 45px 45px 20px;
+    margin-top: 50px;
+    background-color: white;
+    box-shadow: 0px 5px 10px #B5C1C5, 0 0 0 10px #EEF5F7 inset;
+    justify-content: center;
+    align-items: center;     
+}
+
+.formulario__field__div__input{  
+    border-radius: 5px;
+    padding: 5px;
+    resize: none;
+}
+
+.formulario__field__div{
+    margin: 10px;
+}
+
+.formulario__label{
+    display: block;
+    font-weight: bold;
+}
+
+
+/* ESTILOS PAGE NOSOTROS */
+
+.presentacion{    
+    margin: 25px;
+    padding: 15px;
+}
+
+.nosotros1{ 
+    display: inline-block;
+    text-align: center;
+    margin: 25px;    
+}
+.nosotros2{  
+    display: inline-block;
+    text-align: center;
+    margin: 25px;    
+}
+.nosotros3{  
+    display: inline-block;
+    text-align: center;
+    margin: 25px;    
+}
+
+
+/*QUERIES PARA TAMAÑO MOBILE*/
+
+@media screen and (max-width:480px) {
+    .contenedor{
+        display: grid;
+        grid-template-areas: "header"
+                             "parrafo1"
+                             "imagen1"
+                             "parrafo2"
+                             "imagen2"
+                             "parrafo3"
+                             "imagen3"
+                             "footer ";
+        grid-template-columns: 1fr ;
+        grid-template-rows: 1fr;
+        gap: 10px;
+        height: 100vh;
+    }
+  
+    .encabezado{
+        position:static;
+        padding: 5px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-around;
+        background-color: rgb(255, 255, 255);
+        height: 150px; 
+       background-image: url(../);
+      
+    }
+
+  
+    .encabezado__nav__lista__li{   
+        list-style: none;
+        display: inline;
+        margin: 3px;
+        padding: 5px;
+        justify-content: space-around;
+    }
+   
+    .contenido__parrafo{
+        margin: 0px;
+        text-align: center;
+        padding: 5px;
+    }
+
+    .derechos{
+    
+        text-align: center;
+        font-size: 10px;
+    }
+
+    .link_logo{
+        width:7%;
+    }
+
+    
+}
+
