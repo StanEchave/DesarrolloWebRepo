@@ -9,6 +9,8 @@ body{
     font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
 }
 
+
+
 /* APLICACION DE GRID PAGE INDEX Y SERVICIOS*/
 
 .contenedor{
@@ -24,6 +26,7 @@ body{
                         "imagen2 parrafo2"
                         "parrafo3 imagen3"
                         "footer footer";
+    
 }
 
 .encabezado{
@@ -61,6 +64,7 @@ body{
 
 /*APLICACION GRID PAGE NOSOTROS */
 
+
 .contenedor__nosotros{
     display: grid;   
     gap: 10px;
@@ -88,6 +92,7 @@ body{
 }
 
 
+
 /* ESTILOS DEL ENCABEZADO Y EL NAV*/
 
 .encabezado{
@@ -101,6 +106,19 @@ body{
     height: 150px;
   
 }
+
+.encabezadoBS{
+    position: sticky;
+    top: 0;   
+    padding: 5px;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    background-color: rgb(255, 255, 255);
+    
+  
+}
+
 
     
 .encabezado__nav__lista{ 
@@ -195,18 +213,19 @@ body{
 }
 
 .formulario{
-    margin: 35px;
+    margin: 10px;
     display: flex;
     flex-direction: row;
     align-items: center;
-    justify-content: center;    
+    justify-content: center;
+    
 }
 
 .formulario__field{
-    width: 30%;
+    width:80%;
     border: 1px solid #CED5D7;
     border-radius: 6px;
-    padding: 45px 45px 20px;
+    padding: 10px;
     margin-top: 50px;
     background-color: white;
     box-shadow: 0px 5px 10px #B5C1C5, 0 0 0 10px #EEF5F7 inset;
@@ -216,15 +235,17 @@ body{
 
 .formulario__field__div__input{  
     border-radius: 5px;
-    padding: 5px;
-    resize: none;
+    padding: 5px;   
+    width: 80%;
 }
 
 .formulario__field__div{
-    margin: 10px;
+  
+    text-align: center;
 }
 
 .formulario__label{
+    margin:10px;
     display: block;
     font-weight: bold;
 }
