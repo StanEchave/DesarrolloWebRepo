@@ -5,9 +5,10 @@
 }
 
 body{
-
+    
     font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
 }
+
 
 
 
@@ -16,29 +17,21 @@ body{
 .contenedor{
     display: grid;
     grid-template-columns: repeat(2,1fr) ;
-    grid-template-rows: repeat(3,1fr);
     gap: 10px;
-    height: 100vh; 
-    justify-content: center;
     align-items: center;
-    grid-template-areas: "header header"
-                        "parrafo1 imagen1"
+    
+    grid-template-areas:"parrafo1 imagen1"
                         "imagen2 parrafo2"
                         "parrafo3 imagen3"
                         "footer footer";
-    
 }
-
-.encabezado{
-    grid-area: header;
-}
-
 
 .contenido__p1{
     grid-area: parrafo1;
 }
 
 .contenido__img1{
+    
     grid-area: imagen1;
 }
 
@@ -47,6 +40,7 @@ body{
 }
 
 .contenido__img2{
+    object-fit: cover;
     grid-area: imagen2;
 }
 
@@ -64,105 +58,72 @@ body{
 
 /*APLICACION GRID PAGE NOSOTROS */
 
-
 .contenedor__nosotros{
     display: grid;   
-    gap: 10px;
-    height: 100vh;    
-    grid-template-areas:"header header header"
-                        "presentacion presentacion presentacion"
-                        "nosotros1 nosotros2 nosotros3"
-                        "footer footer footer";
+    gap: 10px;  
+    grid-template-areas:"presentacion"
+                        "nosotros"
+                        "footer";
 }
 
 .presentacion{
     grid-area: presentacion;
 }
 
-.nosotros1{
-    grid-area: nosotros1;
-}
-
-.nosotros2{
-    grid-area: nosotros2;
-}
-
-.nosotros3{
-    grid-area: nosotros3;
+.nosotros{
+    grid-area: nosotros;
 }
 
 
+/* APLICACION DE GRID PAGE CONTACTO*/
+
+.contenedor1{
+    display: grid;
+    align-items: center;
+    grid-template-columns: 1fr ;
+    justify-content: center;
+    grid-template-areas:"formulario formulario"
+                         "footer footer";
+}
+
+.total_formulario{
+    grid-area: formulario;
+}
 
 /* ESTILOS DEL ENCABEZADO Y EL NAV*/
 
-.encabezado{
-    position: sticky;
-    top: 0;   
-    padding: 5px;
-    display: flex;
-    align-items: center;
-    justify-content: space-around;
-    background-color: rgb(255, 255, 255);
-    height: 150px;
-  
-}
-
 .encabezadoBS{
     position: sticky;
-    top: 0;   
+    top: 0; 
     padding: 5px;
     display: flex;
+    flex-direction: row;
     align-items: center;
     justify-content: space-around;
-    background-color: rgb(255, 255, 255);
-    
+    background-color: rgb(255, 255, 255);  
+    z-index: 5000;   
+    opacity: 95%;   
+}
+
   
-}
-
-
-    
-.encabezado__nav__lista{ 
- 
-  font-size: 18px;  
-}
-
-.encabezado__nav__lista__li{   
-    list-style: none;
-    display: inline-block;
-    margin: 10px;   
-}
-
-.links{
-    text-decoration: none;
-    font-size: 18px;
-    color: rgb(0, 0, 0);
-}
-
-
-/* ESTILOS DEL CONTENIDO PRINCIPAL*/
-.contenido{
-    display: flex;
-    justify-content: space-around;
-    width: 100%;
-   
-} 
-
+/* ESTILOS DEL CONTENIDO DEL INDEX Y SERVICIOS*/
 
 .contenido__img{
     border-radius: 15px;
-  
+    margin: 0;
 }
 
 .contenido__titulo{
-    font-size: 32px;
+    font-size: 26px;
     text-align: center;
-    margin: 10px;
-    
-
+    margin: 0px;   
 }
 
 .contenido__parrafo{
-    margin: 15px;
+    text-align: center;
+    padding: 10px;
+    margin: 0;
+    font-size: 23px;
 }
 
 
@@ -172,32 +133,49 @@ body{
     right: 20px;
     bottom: 20px;
     z-index: 5;
-
+    width: 60px;
+    border-radius: 50%;
 }
+
+/* ANIMACION DEL LOGO DE WPP*/
+.wppLogo:hover{
+    width: 90px;
+    box-shadow: 4px 4px 8px  rgb(50, 155, 50);
+}
+
 
 /* ESTILOS DEL PIE DE PAGINA*/
 
 .pie{
-    
- 
     padding-top: 10px;
-
     background-color: rgb(177, 199, 209);
 }
 
-.redes{
-    
+.follow{
+    font-size: 22px;
+}
+.redes{   
+   
     padding: 8px;
+    margin: 0;
 }
 
 .link_logo{
-    width:2.5%;
+    width:40px;
 }
 
 .derechos{
-    
+    font-size: 18px;
     text-align: center;
+    margin: 0; 
 }
+
+.links{
+    text-decoration: none;
+    font-size: 18px;
+    color: rgb(0, 0, 0);
+}
+
 
 
 /* ESTILOS DEL FORMULARIO DE CONTACTO*/
@@ -217,16 +195,16 @@ body{
     display: flex;
     flex-direction: row;
     align-items: center;
-    justify-content: center;
-    
+    justify-content: center;    
 }
 
 .formulario__field{
-    width:80%;
+    width: 50%;
     border: 1px solid #CED5D7;
     border-radius: 6px;
     padding: 10px;
-    margin-top: 50px;
+    margin-top: 30px;
+    margin-bottom: 20PX;
     background-color: white;
     box-shadow: 0px 5px 10px #B5C1C5, 0 0 0 10px #EEF5F7 inset;
     justify-content: center;
@@ -239,8 +217,7 @@ body{
     width: 80%;
 }
 
-.formulario__field__div{
-  
+.formulario__field__div{  
     text-align: center;
 }
 
@@ -250,38 +227,57 @@ body{
     font-weight: bold;
 }
 
+/* ESTILOS PAGE NOSOTROS*/
 
-/* ESTILOS PAGE NOSOTROS */
-
-.presentacion{    
-    margin: 25px;
-    padding: 15px;
+.presentacion{
+    font-size: 24px;
 }
 
-.nosotros1{ 
-    display: inline-block;
-    text-align: center;
-    margin: 25px;    
+.parrafo__nosotros{
+    padding: 18px;
 }
-.nosotros2{  
-    display: inline-block;
-    text-align: center;
-    margin: 25px;    
-}
-.nosotros3{  
-    display: inline-block;
-    text-align: center;
-    margin: 25px;    
+
+/* MEDIA QUERIES ADAPTACIOND DE TAMAÑO*/
+
+/* se achican los tamaños de las letras */
+@media screen and (max-width:990px) and (min-width:821px){
+    .contenido__parrafo{    
+        font-size: 20px;
+        padding: 5px;
+    }
+    .contenido__titulo{
+        font-size: 24px;         
+    }
+
+    .follow{
+        font-size: 18px ;
+    }
+    .derechos{
+        font-size: 14px;
+    }
+
+    .formulario__titulo{
+        font-size: 31px;
+    }
+
+    .formulario__field{
+        width: 60%;           
+    }
+    .presentacion{
+        font-size: 22px;
+    }
+    .parrafo__nosotros{
+        padding: 16px;
+    }
 }
 
 
-/*QUERIES PARA TAMAÑO MOBILE*/
-
-@media screen and (max-width:480px) {
+/* se organiza contenido uno arriba del otro, se cambian tamaño de textos, se cambia comportamiento del header*/
+@media screen and (max-width:820px) and (min-width:481px){
     .contenedor{
         display: grid;
-        grid-template-areas: "header"
-                             "parrafo1"
+        grid-template-areas:"header"
+                            "parrafo1"
                              "imagen1"
                              "parrafo2"
                              "imagen2"
@@ -290,48 +286,125 @@ body{
                              "footer ";
         grid-template-columns: 1fr ;
         grid-template-rows: 1fr;
-        gap: 10px;
+        gap: 10;
         height: 100vh;
     }
   
-    .encabezado{
-        position:static;
+    .encabezadoBS{
+        position: relative;
+        top: 0;   
         padding: 5px;
         display: flex;
-        flex-direction: column;
+        flex-direction: row;
         align-items: center;
         justify-content: space-around;
         background-color: rgb(255, 255, 255);
-        height: 150px; 
-       background-image: url(../);
-      
     }
-
-  
-    .encabezado__nav__lista__li{   
-        list-style: none;
-        display: inline;
-        margin: 3px;
-        padding: 5px;
-        justify-content: space-around;
+    
+    .contenido__titulo{
+        font-size: 22px;
+         
     }
    
-    .contenido__parrafo{
-        margin: 0px;
-        text-align: center;
+    .contenido__parrafo{    
+        font-size: 18px;
+        padding: 5px;
+        margin: 5px;
+    }
+
+    .follow{
+        font-size: 16px ;
+    }
+    .derechos{
+        font-size: 12px;
+    }
+
+    .link_logo{
+        width:5%
+    }    
+
+    .formulario__titulo{
+        font-size: 28px;
+    }
+
+    .formulario__field{
+        width: 75%;
+           
+    }
+    .presentacion{
+        font-size: 20px;
+    }
+
+    .parrafo__nosotros{
+        padding: 16px;
+    }
+
+}
+/* se mantiene el mismo orden q el anterior y se modifica el tamaño del texto*/
+@media screen and (max-width:480px) {
+    .contenedor{
+        display: grid;
+        grid-template-areas:"header"
+                            "parrafo1"
+                             "imagen1"
+                             "parrafo2"
+                             "imagen2"
+                             "parrafo3"
+                             "imagen3"
+                             "footer ";
+        grid-template-columns: 1fr ;
+        grid-template-rows: 1fr;
+        gap: 10;
+        height: 100vh;
+    }
+  
+    .encabezadoBS{
+        position: relative;
+        top: 0;   
+        padding: 5px;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-around;
+        background-color: rgb(255, 255, 255);
+    }
+    
+    .contenido__titulo{
+        font-size: 20px;         
+    }
+   
+    .contenido__parrafo{    
+        font-size: 14px;
         padding: 5px;
     }
 
+    .follow{
+        font-size: 14px ;
+    }
     .derechos{
-    
-        text-align: center;
         font-size: 10px;
     }
 
     .link_logo{
-        width:7%;
+        width:7%
     }
 
+    .formulario__titulo{
+        font-size: 25px;
+    }
+
+    .formulario__field{
+        width: 90%;
+           
+    }
+
+    .presentacion{
+        font-size: 18px;
+    }
+    .parrafo__nosotros{
+        padding: 10px;
+    }
     
 }
+
 

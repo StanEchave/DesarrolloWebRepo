@@ -4,128 +4,132 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Link de BOOTSTRAP-->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
+    <!-- Link de CSS-->
     <link rel="stylesheet" href="../css/styles.css">
     <title>Contacto</title>
     <link rel="icon" href="../icons/icono.png" type="image/x-icon">
 </head>
 
 <body>
-    
-    <header class="row  encabezadoBS">        
+    <!-- Header con el navegador con bootstrap-->
+    <header class="conteiner-fluid encabezadoBS">        
 
-        <nav class="navbar navbar-expand-lg ">
+        <nav class="navbar navbar-expand-lg justify-content-center">
 
-            <div class="container ">
+            <div class="row justify-content-center m-0 ">
                 
-                <a class=" text-center" href="index.html">
-                  <img  src="../icons/logo.png" alt="logo DDEIntegral Service Tech">
-                </a>
-                               
-                <button class="navbar-toggler" type="button" 
-                data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false"   aria-label="Toggle navigation">
-                  <span class="navbar-toggler-icon"></span>
-                </button>
                 
-                <div class="col-6 collapse navbar-collapse justify-content-center" id="navbarNav">
-                  <ul class="navbar-nav">
-                    <li class="nav-item">
-                      <a class="nav-link active" aria-current="page" href="
-                      ../index.html">Home</a>
-                    </li>
-                    <li class="nav-item">
-                      <a class="nav-link" href="servicios.html">Servicios</a>
-                    </li>
-                    <li class="nav-item">
-                      <a class="nav-link" href="clientes.html">Clientes</a>
-                    </li>
-                    <li class="nav-item">
-                      <a class="nav-link" href="contacto.html">Contacto</a>
-                    </li>
-                    <li class="nav-item">
-                      <a class="nav-link" href="nosotros.html">Nosotros</a>
-                    </li>
-              
-                  
-                </ul>
-              </div>
+                    <a class="text-center p-0" href="/desafioFinal/index.html">
+                      <img  src="../icons/logo.png" alt="logo DDEIntegral Service Tech">
+                    </a>
+                   
+                    <button class="navbar-toggler col-2" type="button" 
+                    data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false"   aria-label="Toggle navigation">
+                      <span class="navbar-toggler-icon "></span>
+                    </button>
+                    
+                    <div class="collapse navbar-collapse justify-content-center" id="navbarNav">
+                        <ul class="navbar-nav">
+                            <li class="nav-item">
+                                <a class="nav-link active  text-center" aria-current="page" href="/desafioFinal/index.html">Home</a>
+                            </li>
+                            <li class="nav-item ">
+                                <a class="nav-link  text-center" href="servicios.html">Servicios</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link  text-center" href="clientes.html">Clientes</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link  text-center" href="contacto.html">Contacto</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link  text-center" href="nosotros.html">Nosotros</a>
+                            </li>                  
+                        </ul>
+                    </div>
+                
+                
             </div>
-          </nav>
+        </nav>
           
     </header>
 
 
-    <div class="total__formulario">
-        <h2 class="formulario__titulo">Formulario de contacto</h2>
 
-        <form class="formulario" action="">
-            <fieldset class="formulario__field">
+    <!-- Contenido principal-->
+    <div class="contenedor1">
+        <div class="total__formulario">
+            <h2 class="formulario__titulo">Formulario de contacto</h2>
+        
+            <form class="formulario" action="">
+                <fieldset class="formulario__field">
+                            
+                    
+        
+                    <div class="formulario__field__div">
+        
+                        <label class="formulario__label" for="Nombre">
+                            Nombre de la empresa 
+                        </label>  
+        
+                        <input class="formulario__field__div__input" type="text" name="nombre " placeholder="Tu nombre" required>
+        
+                    </div>
+        
+                    <div class="formulario__field__div">
+                        <label class="formulario__label" for="mail">
+                            E-mail
+                        </label>         
+                        <input class="formulario__field__div__input" type="email" name="mail " placeholder="Tu mail" required>
+                    </div>
+        
+                    
+        
+                    <div class="formulario__field__div">
+                        <label class="formulario__label" for="comentario" >
+                            Consulte su cotizacion
+                        </label>
+                        <textarea class="formulario__field__div__input" name="comentario"  cols="30" rows="10" placeholder="Haga su consulta" required ></textarea>         
                         
-                <!-- Creamos los diferentes contenedores con la etiqueta div-->
-
-                <div class="formulario__field__div">
-
-                    <label class="formulario__label" for="Nombre">
-                        Nombre de la empresa 
-                    </label>  
-
-                    <input class="formulario__field__div__input" type="text" name="nombre " placeholder="Tu nombre">
-
-                </div>
-
-                <div class="formulario__field__div">
-                    <label class="formulario__label" for="mail">
-                        E-mail
-                    </label>         
-                    <input class="formulario__field__div__input" type="email" name="mail " placeholder="Tu mail">
-                </div>
-
-                
-
-                <div class="formulario__field__div">
-                    <label class="formulario__label" for="comentario" >
-                        Comentario 
-                    </label>
-                    <textarea class="formulario__field__div__input" name="comentario"  cols="30" rows="10" placeholder="Haz tu comentario" ></textarea>         
-                    <!-- <input type="text" name="comentario " placeholder="Haz tu comentario" size="100"> -->
-                </div>
-
-                <!-- etiquetas con el type necesario para crear el boton de enviar y borrar la informacion de los input-->
-                <div class="formulario__field__div">
-                    <input type="submit" value="enviarlo">
-                    <input type="reset" value="borrar">
-                </div>
-                                        
-            </fieldset>
-        </form>
-    </div>
-
-
-    <footer class="pie">
-      
-        <div class="follow" style="text-align:center ;">
-            Seguinos en nuestras redes
+                    </div>
+        
+                    
+                    <div class="formulario__field__div">
+                        <input type="submit" value="enviarlo">
+                        <input type="reset" value="borrar">
+                    </div>
+                                            
+                </fieldset>
+            </form>
         </div>
-
-        <div class="redes" style="text-align:center ;">   
-
-            <a class="links" href="https://www.twitter.com"target="_blank" >
-                <img src="../icons/twitter.png" alt="" width="2.5%">
-            </a>
-
-            <a class="links" href="https://www.Facebook.com"target="_blank" >
-                <img src="../icons/facebook.png" alt="" width="2.5%">
-            </a>
+        
+        <!--Pie de pagina-->
+        <footer class="pie">
             
-            <a class="links" href="https://www.instagram.com"target="_blank" >
-                <img src="../icons/instagram.png" alt="" width="2.5%">
-            </a>
-        </div>
-
-       
-
-        <h3 class="derechos"> Todos los derechos reservados </h3>
-    </footer>
+            <div class="follow" style="text-align:center ;">
+                Seguinos en nuestras redes
+            </div>
+        
+            <div class="redes" style="text-align:center ;">   
+        
+                <a class="links" href="https://www.twitter.com"target="_blank" >
+                    <img class="link_logo" src="../icons/twitter.png" alt="" >
+                </a>
+        
+                <a class="links" href="https://www.Facebook.com"target="_blank" >
+                    <img class="link_logo" src="../icons/facebook.png" alt="" >
+                </a>
+                
+                <a class="links" href="https://www.instagram.com"target="_blank" >
+                    <img class="link_logo" src="../icons/instagram.png" alt="" >
+                </a>
+            </div>
+        
+            <h3 class="derechos"> Todos los derechos reservados </h3>
+        </footer>
+    </div>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2" crossorigin="anonymous"></script>
 
 
